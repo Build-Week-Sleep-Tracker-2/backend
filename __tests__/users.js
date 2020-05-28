@@ -10,7 +10,7 @@ afterAll(async () => {
     await db.destroy()
 })
 
-describe("user endpoint unit tests", () => {
+describe("User endpoint unit tests", () => {
     it("Get /register ", async () => {
         const res = await supertest(server).get("/api/auth/register")
         expect(res.statusCode).toBe(400);
@@ -22,7 +22,7 @@ describe("user endpoint unit tests", () => {
     })
 })
 
-describe("registration endpoint testing", () => {
+describe("Registration endpoint testing", () => {
 
     beforeEach(async () => {
         await db("user").truncate()
@@ -36,7 +36,7 @@ describe("registration endpoint testing", () => {
 
 })
 
-describe("login endpoint testing", () => {
+describe("Login endpoint testing", () => {
 
     beforeEach(async () => {
         await db("user").truncate();
