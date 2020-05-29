@@ -6,7 +6,7 @@ exports.up = async function (knex) {
     user.string('username', 255).notNullable().unique();
     user.string('password', 255).notNullable();
     user.string('name', 255).notNullable().unique();
-    info.string('age').notNullable();
+    user.string('age').notNullable();
   })
 
 
