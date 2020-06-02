@@ -23,9 +23,19 @@ function findById(id) {
 		.first()
 }
 
+async function remove(id) {
+	return await db("user").where({id}).delete()
+}
+
+async function putData(id, input) {
+	return await db("user").where({id}).update(input)
+}
+ 
 module.exports = {
 	add,
 	find,
 	findBy,
 	findById,
+	remove,
+	putData
 }
