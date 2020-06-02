@@ -1,4 +1,4 @@
-const db = require("../database/dbconfig")
+const db = require("../database/dbConfig")
 
 async function add(user) {
 
@@ -7,19 +7,18 @@ async function add(user) {
 }
 
 function find() {
-    return db("userInfo").select("firstName", "lastName", 
-    "age", "date", "mood_id")
+    return db("userInfo").select("date", "mood_id")
 }
 
 function findBy(filter) {
 	return db("userInfo")
-		.select("firstName", "lastName", "age", "date", "mood_id")
+		.select("date", "mood_id")
 		.where(filter)
 }
 
 function findById(id) {
     return db("userInfo")
-		.select("firstName", "lastName", "age", "date", "mood_id")
+		.select("date", "mood_id")
 		.where({ id })
 		.first()
 }
